@@ -7,3 +7,5 @@ There is a windows and a UNIX/linux version.
 Originator: Alvin Dulcan
 -----------------
 Inital Release: 2014-11-26
+
+How do I work locally?  Is it gitClone?
