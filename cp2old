@@ -1,0 +1,28 @@
+#!/bin/sh -f
+# cp2old is used to copy files to the local old directory with a suffix for safety purposes
+# in the form <filename>.2003-02-14.08:22
+
+if [ $# -ne 1 ]
+then
+  echo Usage: cp2old filename
+  exit
+fi
+
+file=`basename $1`
+if [ ! -f $file ]
+then
+  echo $file does not exist or is a directory
+  exit
+fi
+
+directory=`dirname $1`
+oldir="${directory}/old"
+if [ ! -d $oldir ] 
+then
+   mkdir $oldir
+fi
+
+ddd=`date +%Y-%m-%d.%H-%M`
+cp -p $1 ${oldir}/${file}.$ddd
+
+echo $file was copied to ${oldir}/${file}.$ddd
