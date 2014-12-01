@@ -9,3 +9,4 @@ Originator: Alvin Dulcan
 Inital Release: 2014-11-26
 
 How do I work locally?  Is it gitClone?
+2014-12-01 local edit in work folder
